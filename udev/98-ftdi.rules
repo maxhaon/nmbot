@@ -1,0 +1,3 @@
+# UDEV rule for Neato FTDI Device
+# TODO(noah) Add serial number to symlink so that we can use other FTDI devices.
+SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE:="0666", SYMLINK+="neato"
